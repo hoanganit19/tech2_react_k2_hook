@@ -125,12 +125,18 @@ export default function ToDo() {
       const doItem = todos[index];
       doItem.isCompleted = doItem.isCompleted ? false : true;
       const dataTodos = [...todos];
-      setTodos(dataTodos);
+      dataTodos[index] = doItem;
+
+      dataTodos.splice(index, 1);
       if (doItem.isCompleted) {
+        dataTodos.push(doItem);
         toast.success("Mark completed success");
       } else {
+        dataTodos.unshift(doItem);
         toast.success("Mark uncomplete success");
       }
+
+      setTodos(dataTodos);
     }
   };
 
