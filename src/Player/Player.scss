@@ -1,0 +1,23 @@
+.player {
+  .player__image {
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 25px;
+    }
+  }
+
+  .player__inner {
+    .player__inner--action {
+      span {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .player__volume {
+    span {
+      cursor: pointer;
+    }
+  }
+}
