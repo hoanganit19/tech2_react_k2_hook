@@ -9,12 +9,16 @@ import RefDemo from "./Refs/RefDemo";
 //import Counter from "./State/Counter";
 import Login from "./State/Login";
 import StateProvider from "./StateProvider/StateProvider";
+import Todos from "./Todos/Todos";
 
 function App() {
   return (
-    <StateProvider>
-      <Home />
-    </StateProvider>
+    // <StateProvider>
+    //   <Home />
+    // </StateProvider>
+    <>
+      <Todos />
+    </>
   );
 }
 

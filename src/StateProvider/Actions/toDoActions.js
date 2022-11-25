@@ -8,9 +8,16 @@ export const addToDo = (todo) => {
   };
 };
 
-export const deleteToDo = (id) => {
+export const deleteToDo = (index) => {
   return {
     type: "todos/delete",
-    payload: id,
+    payload: index,
+  };
+};
+
+export const markCompleted = (todo) => {
+  return {
+    type: "todos/completed",
+    payload: todo,
   };
 };
