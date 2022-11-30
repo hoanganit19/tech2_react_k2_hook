@@ -3,17 +3,22 @@ import DemoChildren from "./DemoChildren";
 
 export default function DemoCallback() {
   const [count, setCount] = useState(0);
-  console.log("render-parent");
-  const handleUp = useCallback(() => {
-    setCount(count + 1);
-  }, [count]);
 
-  console.log(handleUp);
+  // const handleUp = useCallback(() => {
+  //   setCount(count + 1);
+  // }, []);
+
+  const handleUp = useCallback(() => {
+    setCount((prevCount) => {
+      return prevCount + 1;
+    });
+    //setCount(count + 1);
+  }, []);
 
   return (
     <>
       <h1>Count: {count}</h1>
-      <DemoChildren count={count} onHandleUp={handleUp} />
+      <DemoChildren onHandleUp={handleUp} />
     </>
   );
 }

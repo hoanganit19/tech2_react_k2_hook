@@ -1,11 +1,10 @@
 import React, { memo } from "react";
 
-function DemoChildren({ onHandleUp, count }) {
+function DemoChildren({ onHandleUp }) {
   console.log("re-render");
 
   return (
     <div>
-      <h1>Count: {count}</h1>
       <button onClick={onHandleUp}>Up</button>
     </div>
   );
